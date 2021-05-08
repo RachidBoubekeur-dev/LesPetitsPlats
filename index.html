@@ -28,8 +28,10 @@
 <body>
     <main>
         <header>
-            <p><img src="images/logo.png" alt="Icône les petits plats" aria-label="Icône les petits plats" class="icone" /></p>
-            <p><img src="images/les_petits_plats.png" alt="Logo les petits plats" aria-label="Logo les petits plats" class="logo" /></p>
+            <a href="index.html">
+                <img src="images/logo.png" alt="Icône les petits plats" aria-label="Icône les petits plats" class="icone" /><br>
+                <img src="images/les_petits_plats.png" alt="Logo les petits plats" aria-label="Logo les petits plats" class="logo" />
+            </a>
         </header>
         <section>
             <input type="search" name="search" placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette" id="search" autocomplete='off' aria-label="Rechercher un ingrédient, appareil, ustensiles ou une recette">
@@ -40,16 +42,22 @@
                 <p class="tag tagUstensile">Ustensiles <i class="far fa-times-circle"></i></p>
             </div>
             <div id="divIngredients" class="divList">
-                <span class="spanIngredients">Ingredients</span>
+                <span class="spanIngredients">Ingédients</span>
                 <i class="fas fa-chevron-up"></i>
+                <div id="listIngredients">
+                </div>
             </div>
             <div id="divAppareils" class="divList">
                 <span class="spanAppareils">Appareils</span>
                 <i class="fas fa-chevron-up"></i>
+                <div id="listAppareils">
+                </div>
             </div>
             <div id="divUstensiles" class="divList">
                 <span class="spanUstensiles">Ustensiles</span>
                 <i class="fas fa-chevron-up"></i>
+                <div id="listUstensiles">
+                </div>
             </div>
         </section>
         <section>
