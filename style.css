@@ -1,3 +1,201 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+html::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+html::-webkit-scrollbar-thumb {
+  background: #C7BEBE;
+  border-radius: 5px;
+}
 
+main {
+  width: 90%;
+  max-width: 1439px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+main > header {
+  text-align: center;
+  margin-top: 1.1em;
+}
+main > section:nth-of-type(1) > #search {
+  width: 100%;
+  font-family: "Lato";
+  background-color: #E7E7E7;
+  border: none;
+  border-radius: 3px;
+  height: 55px;
+  padding: 15px;
+  outline: none;
+  margin-top: 0.5em;
+  font-weight: 600;
+}
+main > section:nth-of-type(1) > #search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+main > section:nth-of-type(1) > .fa-search {
+  position: absolute;
+  right: 7%;
+  margin-top: -1.45em;
+  font-size: 1.8em;
+  display: none;
+  cursor: pointer;
+}
+main > section:nth-of-type(1) > #tagList > .tag {
+  width: max-content;
+  display: inline-block;
+  border-radius: 4px;
+  color: white;
+  padding: 0.7em;
+  padding-left: 1.2em;
+  padding-right: 1.35em;
+  margin-right: 0.1em;
+  margin-bottom: -0.5em;
+  font-size: 0.6em;
+  font-family: "Lato";
+  font-weight: 600;
+  transition: all 0.5s;
+}
+main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 1.5s;
+}
+main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle:hover, main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle:active, main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle:focus {
+  transform: rotate(472deg);
+}
+main > section:nth-of-type(1) > #tagList > .tagIngredient {
+  background: #3282F7;
+}
+main > section:nth-of-type(1) > #tagList > .tagAppareil {
+  background: #68D9A4;
+}
+main > section:nth-of-type(1) > #tagList > .tagUstensile {
+  background: #ED6454;
+}
+main > section:nth-of-type(1) > .divList {
+  background: #3282F7;
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 0.75em;
+  width: max-content;
+  height: 19.7px;
+  margin-top: 1em;
+  display: inline-block;
+  transition: all 0.5s;
+  padding: 1em;
+  padding-top: 1.3em;
+  cursor: pointer;
+  color: white;
+  margin-top: 1.5em;
+  margin-right: 0.8em;
+  margin-bottom: -0.5em;
+  border-radius: 3px;
+}
+main > section:nth-of-type(1) > .divList:hover, main > section:nth-of-type(1) > .divList:active, main > section:nth-of-type(1) > .divList:focus {
+  filter: brightness(95%);
+}
+main > section:nth-of-type(1) > .divList .fa-chevron-up {
+  transform: rotate(180deg);
+  margin-left: 1.5em;
+}
+main > section:nth-of-type(1) > #divIngredients {
+  background: #3282F7;
+}
+main > section:nth-of-type(1) > #divAppareils {
+  background: #68D9A4;
+}
+main > section:nth-of-type(1) > #divUstensiles {
+  background: #ED6454;
+  margin-bottom: 0.3em;
+}
+main > section:nth-of-type(2) {
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+main > section:nth-of-type(2) > article {
+  width: 100%;
+  min-width: 272px;
+  max-width: 360px;
+  height: 364px;
+  background: #C7BEBE;
+  border-radius: 3px;
+  font-family: "Lato";
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-bottom: 4em;
+  display: inline-block;
+}
+main > section:nth-of-type(2) > article > aside {
+  background: #E7E7E7;
+  position: relative;
+  bottom: -178.5px;
+  width: 100%;
+  min-width: 272px;
+  max-width: 360px;
+  height: 180px;
+  padding-top: 0.5em;
+  border-radius: 0px 0px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  flex-wrap: wrap;
+}
+main > section:nth-of-type(2) > article > aside > h2 {
+  font-size: 18px;
+  margin-left: 1em;
+  margin-bottom: 0px;
+  width: max-content;
+  max-width: 255px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main > section:nth-of-type(2) > article > aside > .time {
+  font-size: 18px;
+  margin-right: 1.5em;
+  margin-bottom: 0px;
+}
+main > section:nth-of-type(2) > article > aside > .ingrédients {
+  font-size: 12px;
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+  min-width: 115px;
+  width: 38%;
+  max-width: 135px;
+}
+main > section:nth-of-type(2) > article > aside > .description {
+  font-size: 12px;
+  min-width: 127px;
+  width: 47%;
+  max-width: 165px;
+  margin-right: 1em;
+  margin-top: 1.5em;
+}
+
+@media screen and (min-width: 830px) {
+  main > section:nth-of-type(1) > .fa-search {
+    display: block;
+  }
+  main > section:nth-of-type(2) {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1620px) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main > section:nth-of-type(1) > .fa-search {
+    margin-left: 1385px;
+    margin-top: -1.5em;
+    margin-bottom: 0.5em;
+    position: initial;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
