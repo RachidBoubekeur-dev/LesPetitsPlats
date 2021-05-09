@@ -15,6 +15,8 @@ class Recettes {
     }
 }
 
+let section1 = document.querySelector('section:nth-of-type(1)');
+let section2 = document.querySelector('section:nth-of-type(2)');
 const listIngredient = document.querySelector('#listIngredients');
 const listAppareil = document.querySelector('#listAppareils');
 const listUstensils = document.querySelector('#listUstensiles');
@@ -26,11 +28,13 @@ const arrayEvent = ['click', 'keypress'];
  */
 function initDataPage (data) {
     initDataRecettes(data);
+    initHtmlRecettes(data);
     initListIngredients();
     initListAppareils();
     initListUstensils();
     handleDivList();
 }
+
 /**
  * initDataRecettes - formate les données dans avec la class Recettes et le stock dans le localStorage
  * @param  {Array} data liste des recettes
@@ -41,6 +45,43 @@ function initDataRecettes(data) {
         arrayRecettes.push(new Recettes(recette.id, recette.name, recette.servings, recette.ingredients, recette.time, recette.description, recette.appliance, recette.ustensils));
     });
     localStorage.setItem('Recettes', JSON.stringify(arrayRecettes));
+}
+
+/**
+ * initHtmlRecettes - stock les recettes dans la variable htmlRecettes
+ * @param  {Array} data liste des recettes
+ */
+function initHtmlRecettes(data) {
+    let htmlRecetteIngredients = "";
+    let htmlRecettes = "";
+    for (let i = 0; i < data.length; i++) {
+        for (let y = 0; y < data[i].ingredients.length; y++) {
+            htmlRecetteIngredients += "" + data[i].ingredients[y].ingredient + ": " + data[i].ingredients[y].quantity  + " " + (data[i].ingredients[y].unit || "") + "<br>";
+        }
+    }
+    data.forEach(recette => {
+        htmlRecettes += "<article tabindex=\"0\"><aside><h2 title=\"" + recette.name + "\">" + recette.name + "</h2><p class=\"time\"><i class=\"far fa-clock\"></i> "
+        + recette.time + " min</p><p class=\"ingrédients\" title=\"" + htmlRecetteIngredients + "\">" + htmlRecetteIngredients + "</p><p class=\"description\" title=\"" + recette.description + "\">"
+        + recette.description + "</p></aside></article>";
+    });
+    displayListRecettes(htmlRecettes);
+}
+
+/**
+ * displayListRecettes - affiche la liste des recettes dans le html
+ * @param  {String} htmlRecettes liste des recettes en html 
+ */
+function displayListRecettes(htmlRecettes) {
+    let icone = document.querySelector('header > a > img:nth-of-type(1)');
+    section2.innerHTML = htmlRecettes;
+    icone.style.marginLeft = "0em";
+    icone.style.marginBottom = "0.5em";
+    icone.style.transform = "rotate(0deg)  scale(1)";
+    setTimeout(() => {
+        section1.style.opacity = 1;
+        section2.style.opacity = 1;
+    }, 1000);
+
 }
 
 /**

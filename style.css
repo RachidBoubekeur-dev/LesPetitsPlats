@@ -21,7 +21,14 @@ main > header {
   margin-bottom: 0.7em;
 }
 main > header > a > img:nth-of-type(1) {
-  margin-bottom: 0.5em;
+  transform: rotate(45deg) scale(0.8);
+  margin-left: 3em;
+  margin-bottom: 2em;
+  transition: all 1s;
+}
+main > section:nth-of-type(1) {
+  opacity: 0;
+  transition: all 0.5s;
 }
 main > section:nth-of-type(1) > #search {
   width: 100%;
@@ -165,10 +172,12 @@ main > section:nth-of-type(1) > #divUstensiles > #listUstensiles > span:hover, m
   color: #bb3c2e;
 }
 main > section:nth-of-type(2) {
+  opacity: 0;
   margin-top: 1.5em;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  transition: all 0.5s;
 }
 main > section:nth-of-type(2) > article {
   width: 100%;
@@ -183,6 +192,10 @@ main > section:nth-of-type(2) > article {
   margin-bottom: 4em;
   display: inline-block;
   cursor: pointer;
+  transition: all 0.5s;
+}
+main > section:nth-of-type(2) > article:hover, main > section:nth-of-type(2) > article:active, main > section:nth-of-type(2) > article:focus {
+  box-shadow: 0px 0px 5px 1px #0000001f;
 }
 main > section:nth-of-type(2) > article > aside {
   background: #E7E7E7;
@@ -204,6 +217,7 @@ main > section:nth-of-type(2) > article > aside > h2 {
   margin-left: 1em;
   margin-bottom: 0px;
   width: max-content;
+  min-width: 30%;
   max-width: 56%;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -221,6 +235,10 @@ main > section:nth-of-type(2) > article > aside > .ingrédients {
   min-width: 115px;
   width: 38%;
   max-width: 135px;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 main > section:nth-of-type(2) > article > aside > .description {
   font-size: 12px;
@@ -229,6 +247,9 @@ main > section:nth-of-type(2) > article > aside > .description {
   max-width: 165px;
   margin-right: 1em;
   margin-top: 1.5em;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media screen and (min-width: 830px) {
