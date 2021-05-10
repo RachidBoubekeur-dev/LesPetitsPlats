@@ -15,8 +15,11 @@ class Recettes {
     }
 }
 
-let section1 = document.querySelector('section:nth-of-type(1)');
-let section2 = document.querySelector('section:nth-of-type(2)');
+const section1 = document.querySelector('section:nth-of-type(1)');
+const section2 = document.querySelector('section:nth-of-type(2)');
+const divIngredient = document.querySelector('#divIngredients');
+const divAppareil = document.querySelector('#divAppareils');
+const divUstensile = document.querySelector('#divUstensiles');
 const listIngredient = document.querySelector('#listIngredients');
 const listAppareil = document.querySelector('#listAppareils');
 const listUstensils = document.querySelector('#listUstensiles');
@@ -33,6 +36,7 @@ function initDataPage (data) {
     initListAppareils();
     initListUstensils();
     handleDivList();
+    handleListIngredients();
 }
 
 /**
@@ -149,22 +153,17 @@ function displayListFiltre (arrayList, idElement) {
  * handleDivList - ouvre le div list lorsque que l'élément est click ou keypress
  */
 function handleDivList() {
-    const section = document.querySelector('section:nth-of-type(1)');
-    let divIngredient = document.querySelector('#divIngredients');
-    let divAppareil = document.querySelector('#divAppareils');
-    let divUstensile = document.querySelector('#divUstensiles');
     arrayEvent.forEach(event => {
         [divIngredient, divAppareil, divUstensile].forEach(element => {
-            element.addEventListener(event, () => {
+            element.querySelector('.fa-chevron-up').addEventListener(event, () => {
                 if(element.style.width === "87px") {
                     // On ferme tous les divList
                     for (let i = 0; i < 3; i++) {
-                        let divList = section.querySelectorAll('.divList')[i];
+                        let divList = section1.querySelectorAll('.divList')[i];
                         divList.style.width = "87px";
                         divList.style.minWidth = "initial";
                         divList.style.height = "19.7px";
                         divList.style.filter = "brightness(100%)";
-                        divList.querySelector('span').style.opacity = 1;
                         divList.querySelector('.fa-chevron-up').style.transform = "rotate(180deg)";
                         divList.querySelector('div').style.display = "none";
                     }
@@ -175,29 +174,35 @@ function handleDivList() {
                     else { element.style.width = "90%"; }
                     element.style.height = "251px";
                     if (element === divIngredient) {
-                        element.querySelector('span').textContent = "Rechercher un ingédient";
+                        element.querySelector('span').innerHTML = "<input type=\"search\" placeholder=\"Rechercher un ingédient\" aria-label=\"Rechercher un ingédient\" name=\"searchIngredient\" id=\"searchIngredient\" class=\"searchInputList\">";
                     } else if (element === divAppareil) {
-                        element.querySelector('span').textContent = "Rechercher un appareil";
+                        element.querySelector('span').innerHTML = "<input type=\"search\" placeholder=\"Rechercher un appareil\" aria-label=\"Rechercher un appareil\" name=\"searchAppareil\" id=\"searchAppareil\" class=\"searchInputList\">";
                     } else if (element === divUstensile) {
-                        element.querySelector('span').textContent = "Rechercher un ustensils";
+                        element.querySelector('span').innerHTML = "<input type=\"search\" placeholder=\"Rechercher un ustensile\" aria-label=\"Rechercher un ustensile\" name=\"searchUstensile\" id=\"searchUstensile\" class=\"searchInputList\">";
                     }
                     element.style.filter = "brightness(95%)";
-                    element.querySelector('span').style.opacity = 0.5;
                     element.querySelector('.fa-chevron-up').style.transform = "rotate(0deg)";
                     element.querySelector('div').style.display = "flex";
                 } else {
-                    divIngredient.querySelector('span').textContent = "Ingédients";
-                    divAppareil.querySelector('span').textContent = "Appareils";
-                    divUstensile.querySelector('span').textContent = "Ustensiles";
-                    element.style.width = "87px";
-                    element.style.minWidth = "initial";
-                    element.style.height = "19.7px";
-                    element.style.filter = "brightness(100%)";
-                    element.querySelector('span').style.opacity = 1;
-                    element.querySelector('.fa-chevron-up').style.transform = "rotate(180deg)";
-                    element.querySelector('div').style.display = "none";
+                    closeDivList(element);
                 }
             });
         });
     });
+}
+
+/**
+ * closeDivList - ferme l'element passé
+ * @param  {Array} element élément html du dom
+ */
+function closeDivList(element) {
+    divIngredient.querySelector('span').textContent = "Ingédients";
+    divAppareil.querySelector('span').textContent = "Appareils";
+    divUstensile.querySelector('span').textContent = "Ustensiles";
+    element.style.width = "87px";
+    element.style.minWidth = "initial";
+    element.style.height = "19.7px";
+    element.style.filter = "brightness(100%)";
+    element.querySelector('.fa-chevron-up').style.transform = "rotate(180deg)";
+    element.querySelector('div').style.display = "none";
 }
