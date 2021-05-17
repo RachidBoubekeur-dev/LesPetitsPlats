@@ -26,11 +26,13 @@ main > header > a > img:nth-of-type(1) {
   margin-bottom: 2em;
   transition: all 1s;
 }
-main > section:nth-of-type(1) {
+main header > aside {
+  margin-top: 1em;
+  text-align: left;
   opacity: 0;
   transition: all 0.5s;
 }
-main > section:nth-of-type(1) > #search {
+main header > aside > #search {
   width: 100%;
   font-family: "Lato";
   background-color: #E7E7E7;
@@ -42,20 +44,20 @@ main > section:nth-of-type(1) > #search {
   margin-top: 0.5em;
   font-weight: 600;
 }
-main > section:nth-of-type(1) > #search::-webkit-search-cancel-button {
+main header > aside > #search::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
-main > section:nth-of-type(1) > .fa-search {
+main header > aside > .fa-search {
   position: absolute;
   right: 7%;
   margin-top: -1.45em;
   font-size: 1.8em;
   display: none;
 }
-main > section:nth-of-type(1) > #tagList > div {
+main header > aside > #tagList > div {
   display: inline-block;
 }
-main > section:nth-of-type(1) > #tagList > div > .tag {
+main header > aside > #tagList > div > .tag {
   width: max-content;
   display: inline-block;
   border-radius: 4px;
@@ -70,25 +72,25 @@ main > section:nth-of-type(1) > #tagList > div > .tag {
   font-weight: 600;
   transition: all 0.5s;
 }
-main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle {
+main header > aside > #tagList > div > .tag > .fa-times-circle {
   margin-left: 0.5em;
   font-size: 1.2em;
   cursor: pointer;
   transition: all 1.5s;
 }
-main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle:hover, main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle:active, main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle:focus {
+main header > aside > #tagList > div > .tag > .fa-times-circle:hover, main header > aside > #tagList > div > .tag > .fa-times-circle:active, main header > aside > #tagList > div > .tag > .fa-times-circle:focus {
   transform: rotate(472deg);
 }
-main > section:nth-of-type(1) > #tagList > div > .tagIngredient {
+main header > aside > #tagList > div > .tagIngredient {
   background: #3282F7;
 }
-main > section:nth-of-type(1) > #tagList > div > .tagAppareil {
+main header > aside > #tagList > div > .tagAppareil {
   background: #68D9A4;
 }
-main > section:nth-of-type(1) > #tagList > div > .tagUstensile {
+main header > aside > #tagList > div > .tagUstensile {
   background: #ED6454;
 }
-main > section:nth-of-type(1) > .divList {
+main header > aside > .divList {
   display: inline-flex;
   align-items: baseline;
   flex-wrap: wrap;
@@ -110,7 +112,7 @@ main > section:nth-of-type(1) > .divList {
   border-radius: 3px;
   cursor: initial;
 }
-main > section:nth-of-type(1) > .divList > span > input {
+main header > aside > .divList > span > input {
   background: none;
   border: none;
   color: white;
@@ -119,20 +121,20 @@ main > section:nth-of-type(1) > .divList > span > input {
   font-family: "Lato";
   font-weight: 600;
 }
-main > section:nth-of-type(1) > .divList > span > input::-webkit-search-cancel-button {
+main header > aside > .divList > span > input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
-main > section:nth-of-type(1) > .divList > span > input::placeholder {
+main header > aside > .divList > span > input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
-main > section:nth-of-type(1) > .divList .fa-chevron-up {
+main header > aside > .divList .fa-chevron-up {
   transform: rotate(180deg);
   margin-left: auto;
   margin-right: 0.5em;
   cursor: pointer;
   transition: all 0.4s;
 }
-main > section:nth-of-type(1) > .divList > .list {
+main header > aside > .divList > .list {
   display: none;
   overflow: auto;
   width: 100%;
@@ -143,49 +145,49 @@ main > section:nth-of-type(1) > .divList > .list {
   flex-direction: column;
   transition: all 0.3s;
 }
-main > section:nth-of-type(1) > .divList > .list::-webkit-scrollbar {
+main header > aside > .divList > .list::-webkit-scrollbar {
   width: 9px;
   height: 9px;
 }
-main > section:nth-of-type(1) > .divList > .list > span {
+main header > aside > .divList > .list > span {
   margin-bottom: 0.65em;
   margin-right: 0.5em;
   margin-left: 0.5em;
   cursor: pointer;
   transition: all 0.4s;
 }
-main > section:nth-of-type(1) > #divIngredients {
+main header > aside > #divIngredients {
   background: #3282F7;
 }
-main > section:nth-of-type(1) > #divIngredients > #listIngredients::-webkit-scrollbar-thumb {
+main header > aside > #divIngredients > #listIngredients::-webkit-scrollbar-thumb {
   background: #0060ec;
   border-radius: 5px;
 }
-main > section:nth-of-type(1) > #divIngredients > #listIngredients > span:hover, main > section:nth-of-type(1) > #divIngredients > #listIngredients > span:active, main > section:nth-of-type(1) > #divIngredients > #listIngredients > span:focus {
+main header > aside > #divIngredients > #listIngredients > span:hover, main header > aside > #divIngredients > #listIngredients > span:active, main header > aside > #divIngredients > #listIngredients > span:focus {
   color: #0050c9;
 }
-main > section:nth-of-type(1) > #divAppareils {
+main header > aside > #divAppareils {
   background: #68D9A4;
 }
-main > section:nth-of-type(1) > #divAppareils > #listAppareils::-webkit-scrollbar-thumb {
+main header > aside > #divAppareils > #listAppareils::-webkit-scrollbar-thumb {
   background: #469e75;
   border-radius: 5px;
 }
-main > section:nth-of-type(1) > #divAppareils > #listAppareils > span:hover, main > section:nth-of-type(1) > #divAppareils > #listAppareils > span:active, main > section:nth-of-type(1) > #divAppareils > #listAppareils > span:focus {
+main header > aside > #divAppareils > #listAppareils > span:hover, main header > aside > #divAppareils > #listAppareils > span:active, main header > aside > #divAppareils > #listAppareils > span:focus {
   color: #3e8f69;
 }
-main > section:nth-of-type(1) > #divUstensiles {
+main header > aside > #divUstensiles {
   background: #ED6454;
   margin-bottom: 0.3em;
 }
-main > section:nth-of-type(1) > #divUstensiles > #listUstensiles::-webkit-scrollbar-thumb {
+main header > aside > #divUstensiles > #listUstensiles::-webkit-scrollbar-thumb {
   background: #d74938;
   border-radius: 5px;
 }
-main > section:nth-of-type(1) > #divUstensiles > #listUstensiles > span:hover, main > section:nth-of-type(1) > #divUstensiles > #listUstensiles > span:active, main > section:nth-of-type(1) > #divUstensiles > #listUstensiles > span:focus {
+main header > aside > #divUstensiles > #listUstensiles > span:hover, main header > aside > #divUstensiles > #listUstensiles > span:active, main header > aside > #divUstensiles > #listUstensiles > span:focus {
   color: #bb3c2e;
 }
-main > section:nth-of-type(2) {
+main > section {
   opacity: 0;
   margin-top: 1.5em;
   display: flex;
@@ -193,7 +195,7 @@ main > section:nth-of-type(2) {
   flex-wrap: wrap;
   transition: all 0.5s;
 }
-main > section:nth-of-type(2) > article {
+main > section > article {
   width: 100%;
   min-width: 272px;
   max-width: 360px;
@@ -208,10 +210,10 @@ main > section:nth-of-type(2) > article {
   cursor: pointer;
   transition: all 0.5s;
 }
-main > section:nth-of-type(2) > article:hover, main > section:nth-of-type(2) > article:active, main > section:nth-of-type(2) > article:focus {
+main > section > article:hover, main > section > article:active, main > section > article:focus {
   box-shadow: 0px 0px 5px 1px #0000001f;
 }
-main > section:nth-of-type(2) > article > aside {
+main > section > article > aside {
   background: #E7E7E7;
   position: relative;
   bottom: -157.5px;
@@ -226,7 +228,7 @@ main > section:nth-of-type(2) > article > aside {
   align-content: baseline;
   flex-wrap: wrap;
 }
-main > section:nth-of-type(2) > article > aside > h2 {
+main > section > article > aside > h2 {
   font-size: 18px;
   margin-left: 1em;
   margin-bottom: 0px;
@@ -237,12 +239,12 @@ main > section:nth-of-type(2) > article > aside > h2 {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-main > section:nth-of-type(2) > article > aside > .time {
+main > section > article > aside > .time {
   font-size: 18px;
   margin-right: 1.5em;
   margin-bottom: 0px;
 }
-main > section:nth-of-type(2) > article > aside > .ingrédients {
+main > section > article > aside > .ingrédients {
   font-size: 12px;
   margin-left: 1.5em;
   margin-top: 1.5em;
@@ -254,7 +256,7 @@ main > section:nth-of-type(2) > article > aside > .ingrédients {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-main > section:nth-of-type(2) > article > aside > .description {
+main > section > article > aside > .description {
   font-size: 12px;
   min-width: 127px;
   width: 47%;
@@ -265,13 +267,13 @@ main > section:nth-of-type(2) > article > aside > .description {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main > section:nth-of-type(2) > #searchFailed {
+main > section > #searchFailed {
   margin-left: auto;
   margin-right: auto;
   margin-top: 8.5%;
   text-align: center;
 }
-main > section:nth-of-type(2) > #searchFailed > span {
+main > section > #searchFailed > span {
   font-family: "Lato";
   color: #d04f4f;
   font-weight: 600;
@@ -279,17 +281,17 @@ main > section:nth-of-type(2) > #searchFailed > span {
 }
 
 @media screen and (min-width: 830px) {
-  main > section:nth-of-type(1) > .fa-search {
+  main header > aside > .fa-search {
     display: block;
   }
-  main > section:nth-of-type(2) {
+  main > section {
     justify-content: space-between;
   }
-  main > section:nth-of-type(2) > article > aside {
+  main > section > article > aside {
     bottom: -178.5px;
     height: 180px;
   }
-  main > section:nth-of-type(2) > article > aside > h2 {
+  main > section > article > aside > h2 {
     max-width: 57%;
   }
 }
@@ -298,7 +300,7 @@ main > section:nth-of-type(2) > #searchFailed > span {
     margin-left: auto;
     margin-right: auto;
   }
-  main > section:nth-of-type(1) > .fa-search {
+  main header > aside > .fa-search {
     margin-left: 1385px;
     margin-top: -1.5em;
     margin-bottom: 0.5em;
