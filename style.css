@@ -51,9 +51,11 @@ main > section:nth-of-type(1) > .fa-search {
   margin-top: -1.45em;
   font-size: 1.8em;
   display: none;
-  cursor: pointer;
 }
-main > section:nth-of-type(1) > #tagList > .tag {
+main > section:nth-of-type(1) > #tagList > div {
+  display: inline-block;
+}
+main > section:nth-of-type(1) > #tagList > div > .tag {
   width: max-content;
   display: inline-block;
   border-radius: 4px;
@@ -61,29 +63,29 @@ main > section:nth-of-type(1) > #tagList > .tag {
   padding: 0.7em;
   padding-left: 1.2em;
   padding-right: 1.35em;
-  margin-right: 0.1em;
+  margin-right: 0.5em;
   margin-bottom: -0.5em;
   font-size: 0.6em;
   font-family: "Lato";
   font-weight: 600;
   transition: all 0.5s;
 }
-main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle {
+main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle {
   margin-left: 0.5em;
   font-size: 1.2em;
   cursor: pointer;
   transition: all 1.5s;
 }
-main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle:hover, main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle:active, main > section:nth-of-type(1) > #tagList > .tag > .fa-times-circle:focus {
+main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle:hover, main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle:active, main > section:nth-of-type(1) > #tagList > div > .tag > .fa-times-circle:focus {
   transform: rotate(472deg);
 }
-main > section:nth-of-type(1) > #tagList > .tagIngredient {
+main > section:nth-of-type(1) > #tagList > div > .tagIngredient {
   background: #3282F7;
 }
-main > section:nth-of-type(1) > #tagList > .tagAppareil {
+main > section:nth-of-type(1) > #tagList > div > .tagAppareil {
   background: #68D9A4;
 }
-main > section:nth-of-type(1) > #tagList > .tagUstensile {
+main > section:nth-of-type(1) > #tagList > div > .tagUstensile {
   background: #ED6454;
 }
 main > section:nth-of-type(1) > .divList {
@@ -262,6 +264,18 @@ main > section:nth-of-type(2) > article > aside > .description {
   height: 100px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+main > section:nth-of-type(2) > #searchFailed {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8.5%;
+  text-align: center;
+}
+main > section:nth-of-type(2) > #searchFailed > span {
+  font-family: "Lato";
+  color: #d04f4f;
+  font-weight: 600;
+  font-size: 1.6em;
 }
 
 @media screen and (min-width: 830px) {

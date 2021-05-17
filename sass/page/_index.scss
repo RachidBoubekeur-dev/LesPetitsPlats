@@ -50,39 +50,41 @@ main {
             margin-top: -1.45em;
             font-size: 1.8em;
             display: none;
-            cursor: pointer;
         }
-        & > #tagList > .tag {
-            width: max-content;
+        & > #tagList > div {
             display: inline-block;
-            border-radius: 4px;
-            color: white;
-            padding: 0.7em;
-            padding-left: 1.2em;
-            padding-right: 1.35em;
-            margin-right: 0.1em;
-            margin-bottom: -0.5em;
-            font-size: 0.6em;
-            font-family: $police1;
-            font-weight: 600;
-            transition: all 0.5s;
-            & > .fa-times-circle {
-                margin-left: 0.5em;
-                font-size: 1.2em;
-                cursor: pointer;
-                transition: all 1.5s;
-                &:hover, &:active, &:focus {
-                    transform: rotate(472deg);
+            & > .tag {
+                width: max-content;
+                display: inline-block;
+                border-radius: 4px;
+                color: white;
+                padding: 0.7em;
+                padding-left: 1.2em;
+                padding-right: 1.35em;
+                margin-right: 0.5em;
+                margin-bottom: -0.5em;
+                font-size: 0.6em;
+                font-family: $police1;
+                font-weight: 600;
+                transition: all 0.5s;
+                & > .fa-times-circle {
+                    margin-left: 0.5em;
+                    font-size: 1.2em;
+                    cursor: pointer;
+                    transition: all 1.5s;
+                    &:hover, &:active, &:focus {
+                        transform: rotate(472deg);
+                    }
                 }
             }
         }
-        & > #tagList > .tagIngredient {
+        & > #tagList > div > .tagIngredient {
             background: $color2;
         }
-        & > #tagList > .tagAppareil {
+        & > #tagList > div > .tagAppareil {
             background: $color3;
         }
-        & > #tagList > .tagUstensile {
+        & > #tagList > div > .tagUstensile {
             background: $color4;
         }
         & > .divList {
@@ -272,6 +274,18 @@ main {
                     overflow: hidden;
                     text-overflow: ellipsis;
                 }
+            }
+        }
+        & > #searchFailed {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 8.5%;
+            text-align: center;
+            & > span {
+                font-family: $police1;
+                color: #d04f4f;
+                font-weight: 600;
+                font-size: 1.6em;
             }
         }
     }
