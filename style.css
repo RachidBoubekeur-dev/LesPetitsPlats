@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+html::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+html::-webkit-scrollbar-thumb {
+  background: #C7BEBE;
+  border-radius: 5px;
+}
+
+main {
+  width: 90%;
+  max-width: 1439px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+main > header {
+  text-align: center;
+  margin-top: 2.5em;
+  margin-bottom: 0.7em;
+}
+main > header > a > img:nth-of-type(1) {
+  transform: rotate(45deg) scale(0.8);
+  margin-left: 3em;
+  margin-bottom: 2em;
+  transition: all 1s;
+}
+main header > aside {
+  margin-top: 1em;
+  text-align: left;
+  opacity: 0;
+  transition: all 0.5s;
+}
+main header > aside > #search {
+  width: 100%;
+  font-family: "Lato";
+  background-color: #E7E7E7;
+  border: none;
+  border-radius: 3px;
+  height: 55px;
+  padding: 15px;
+  outline: none;
+  margin-top: 0.5em;
+  font-weight: 600;
+}
+main header > aside > #search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+main header > aside > .fa-search {
+  position: absolute;
+  right: 7%;
+  margin-top: -1.45em;
+  font-size: 1.8em;
+  display: none;
+}
+main header > aside > #tagList > div {
+  display: inline-block;
+}
+main header > aside > #tagList > div > .tag {
+  width: max-content;
+  display: inline-block;
+  border-radius: 4px;
+  color: white;
+  padding: 0.7em;
+  padding-left: 1.2em;
+  padding-right: 1.35em;
+  margin-right: 0.5em;
+  margin-bottom: -0.5em;
+  font-size: 0.6em;
+  font-family: "Lato";
+  font-weight: 600;
+  transition: all 0.5s;
+}
+main header > aside > #tagList > div > .tag > .fa-times-circle {
+  margin-left: 0.5em;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 1.5s;
+}
+main header > aside > #tagList > div > .tag > .fa-times-circle:hover, main header > aside > #tagList > div > .tag > .fa-times-circle:active, main header > aside > #tagList > div > .tag > .fa-times-circle:focus {
+  transform: rotate(472deg);
+}
+main header > aside > #tagList > div > .tagIngredient {
+  background: #3282F7;
+}
+main header > aside > #tagList > div > .tagAppareil {
+  background: #68D9A4;
+}
+main header > aside > #tagList > div > .tagUstensile {
+  background: #ED6454;
+}
+main header > aside > .divList {
+  display: inline-flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  background: #3282F7;
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 0.75em;
+  width: 87px;
+  min-width: initial;
+  max-width: 397px;
+  height: 19.7px;
+  transition: all 1s;
+  padding: 1em;
+  padding-top: 1.3em;
+  color: white;
+  margin-top: 1.5em;
+  margin-right: 0.8em;
+  margin-bottom: -0.5em;
+  border-radius: 3px;
+  cursor: initial;
+}
+main header > aside > .divList > span > input {
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  width: auto;
+  font-family: "Lato";
+  font-weight: 600;
+}
+main header > aside > .divList > span > input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+main header > aside > .divList > span > input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+main header > aside > .divList .fa-chevron-up {
+  transform: rotate(180deg);
+  margin-left: auto;
+  margin-right: 0.5em;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main header > aside > .divList > .list {
+  display: none;
+  overflow: auto;
+  width: 100%;
+  height: 90%;
+  margin-top: 1.5em;
+  flex-wrap: wrap;
+  align-content: space-between;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+main header > aside > .divList > .list::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+main header > aside > .divList > .list > span {
+  margin-bottom: 0.65em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+main header > aside > #divIngredients {
+  background: #3282F7;
+}
+main header > aside > #divIngredients > #listIngredients::-webkit-scrollbar-thumb {
+  background: #0060ec;
+  border-radius: 5px;
+}
+main header > aside > #divIngredients > #listIngredients > span:hover, main header > aside > #divIngredients > #listIngredients > span:active, main header > aside > #divIngredients > #listIngredients > span:focus {
+  color: #0050c9;
+}
+main header > aside > #divAppareils {
+  background: #68D9A4;
+}
+main header > aside > #divAppareils > #listAppareils::-webkit-scrollbar-thumb {
+  background: #469e75;
+  border-radius: 5px;
+}
+main header > aside > #divAppareils > #listAppareils > span:hover, main header > aside > #divAppareils > #listAppareils > span:active, main header > aside > #divAppareils > #listAppareils > span:focus {
+  color: #3e8f69;
+}
+main header > aside > #divUstensiles {
+  background: #ED6454;
+  margin-bottom: 0.3em;
+}
+main header > aside > #divUstensiles > #listUstensiles::-webkit-scrollbar-thumb {
+  background: #d74938;
+  border-radius: 5px;
+}
+main header > aside > #divUstensiles > #listUstensiles > span:hover, main header > aside > #divUstensiles > #listUstensiles > span:active, main header > aside > #divUstensiles > #listUstensiles > span:focus {
+  color: #bb3c2e;
+}
+main > section {
+  opacity: 0;
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: all 0.5s;
+}
+main > section > article {
+  width: 100%;
+  min-width: 272px;
+  max-width: 360px;
+  height: 364px;
+  background: #C7BEBE;
+  border-radius: 3px;
+  font-family: "Lato";
+  font-size: 0.8em;
+  font-weight: 600;
+  margin-bottom: 4em;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+main > section > article:hover, main > section > article:active, main > section > article:focus {
+  box-shadow: 0px 0px 5px 1px #0000001f;
+}
+main > section > article > aside {
+  background: #E7E7E7;
+  position: relative;
+  bottom: -157.5px;
+  width: 100%;
+  min-width: 272px;
+  max-width: 360px;
+  height: 200px;
+  padding-top: 0.5em;
+  border-radius: 0px 0px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-content: baseline;
+  flex-wrap: wrap;
+}
+main > section > article > aside > h2 {
+  font-size: 18px;
+  margin-left: 1em;
+  margin-bottom: 0px;
+  width: max-content;
+  min-width: 30%;
+  max-width: 56%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main > section > article > aside > .time {
+  font-size: 18px;
+  margin-right: 1.5em;
+  margin-bottom: 0px;
+}
+main > section > article > aside > .ingrédients {
+  font-size: 12px;
+  margin-left: 1.5em;
+  margin-top: 1.5em;
+  min-width: 115px;
+  width: 38%;
+  max-width: 135px;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main > section > article > aside > .description {
+  font-size: 12px;
+  min-width: 127px;
+  width: 47%;
+  max-width: 165px;
+  margin-right: 1em;
+  margin-top: 1.5em;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main > section > #searchFailed {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8.5%;
+  text-align: center;
+}
+main > section > #searchFailed > span {
+  font-family: "Lato";
+  color: #d04f4f;
+  font-weight: 600;
+  font-size: 1.6em;
+}
+
+@media screen and (min-width: 830px) {
+  main header > aside > .fa-search {
+    display: block;
+  }
+  main > section {
+    justify-content: space-between;
+  }
+  main > section > article > aside {
+    bottom: -178.5px;
+    height: 180px;
+  }
+  main > section > article > aside > h2 {
+    max-width: 57%;
+  }
+}
+@media screen and (min-width: 1620px) {
+  main {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main header > aside > .fa-search {
+    margin-left: 1385px;
+    margin-top: -1.5em;
+    margin-bottom: 0.5em;
+    position: initial;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
