@@ -376,6 +376,7 @@ const initDataPage = (data) => {
     handleSearchIngredient();
     handleSearchAppareil();
     handleSearchUstensil();
+    filtreTagRecette();
 };
 
 /**
@@ -570,13 +571,14 @@ const handleSearchRecettes = () => {
     searchRecettes.addEventListener('keyup', () => {
         if (searchRecettes.value.length >= 3) {
             const recettes = factory.searchRecettes(searchRecettes.value.toLowerCase());
+            if (recettes.length !== 0) factory.setRecettes(recettes);
             initHtmlRecettes(recettes);
             initListIngredients(recettes);
             initListAppareils(recettes);
             initListUstensils(recettes);
         } else {
-            const recettes = factory.getRecettes();
-            initHtmlRecettes(recettes);
+            filtreTagRecette();
+            initHtmlRecettes(factory.getRecettes());
             initListIngredients();
             initListAppareils();
             initListUstensils();
@@ -776,7 +778,7 @@ const spliceTagUstensil = () => {
             tagUstensil.querySelector('i').addEventListener(event, () => {
                 const positionTag = arrayListTagUstensil.indexOf(tagUstensil.textContent.toLowerCase());
                 arrayListTagUstensil.splice(positionTag, 1);
-                factory.setTagAppareil(arrayListTagUstensil);
+                factory.setTagUstensil(arrayListTagUstensil);
                 filtreTagRecette();
                 initHtmlRecettes();
                 tagUstensil.remove();
@@ -808,8 +810,12 @@ const filtreTagRecette = () => {
         origineRecette = recetteTagUstensil;
         factory.setRecettes(origineRecette);
     });
-    initListIngredients(origineRecette);
-    initListAppareils(origineRecette);
-    initListUstensils(origineRecette);
-    if (arrayListTagIngredient.length === 0 && arrayListTagAppareil.length === 0 && arrayListTagUstensil.length === 0) factory.setRecettes(origineRecette);
+    if (searchRecettes.value.length >= 3) {
+        const recettesSearch = factory.searchRecettes(searchRecettes.value.toLowerCase());
+        if (recettesSearch.length !== 0) factory.setRecettes(recettesSearch);
+    }
+    if (arrayListTagIngredient.length === 0 && arrayListTagAppareil.length === 0 && arrayListTagUstensil.length === 0 && searchRecettes.value.length <= 2) factory.setRecettes(origineRecette);
+    initListIngredients();
+    initListAppareils();
+    initListUstensils();
 };
